@@ -10,7 +10,7 @@ app.post("/slack/ytcheck", async (req, res) => {
   const hours = Number(req.body.text) || 24;
   const since = Date.now() - hours * 60 * 60 * 1000;
 
-  const FEED_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+  const FEED_URL = "https://script.googleusercontent.com/a/macros/fastforwardvideos.com/echo?user_content_key=AehSKLhxk6crLAjWt44MS6Ydeus5qraun90Bz45WIddXtelwOgBtkc4Iv4Z8n3qo7RqkfRIVuzahSRxw8NdEKWdKh0VHISnBrScriiRkvFR4_oE4hZvqRlA-lJKEOGHwCmi9UMj0N4vL53Yjf0pGFjoBVjlf0wHgezEEabF6-UePz-GDhbWeGwx2V0h4OfKq8moKDntDJJGENv7hau9RyppluUwgA92M_WxkSYbxpGWwVtqMk7-H8dpoMENJWupl60hjnX3TPVRXXBqlucoJ1U7OozbLaeOc0G4ngD1iZD7TW4GXJ_xdhegP5oPOcNVLfw&lib=MHkiadUGsNbolhMAFY3V4OGr5Ti-DJNIB";
 
   try {
     const feed = await parser.parseURL(FEED_URL);
